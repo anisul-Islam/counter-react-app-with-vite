@@ -4,13 +4,13 @@ const Counter = () => {
   const [count, setCount] = useState(0);
 
   const handleIncrement = () => {
-    setCount(count + 1);
+    setCount((prevCount) => prevCount + 1);
   };
   const handleReset = () => {
     setCount(0);
   };
   const handleDecrement = () => {
-    setCount(count - 1);
+    setCount((prevCount) => prevCount - 1);
   };
   return (
     <div className="counter-container">
